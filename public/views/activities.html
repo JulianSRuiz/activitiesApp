@@ -1,0 +1,16 @@
+<div class="activities-wrapper">
+<section class="activity-card" ng-repeat="activity in activities">
+    <div class='image-container'>
+      <img src="{{activity.largeImageURL}}" alt="{{data.title}}">
+    </div>
+    <div class='location-inner-left'>
+          <h1>{{activity.title}}</h1>
+          <h6>Location: {{activity.latLng}}<h6>
+          <h6>For More Information: {{activity.shortDescription}}</h6>
+          <h6><a ui-sref="reviews">Reviews</a><h6>
+    </div>
+    <div class="location-inner-right">
+          <h2><strong>Price:</strong> {{activity.fromPrice}}</h2>
+    </div>
+</section>
+</div>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='dosumApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>DoSum</title>
+</head>
+
+<body ng-controller='mainCtrl'>
+    <header>
+        <div class="banner-container">
+            <div class="headerwrapper">
+                <div class="company_name">DoSum</div>
+                <a ui-sref="home"><img src="http://shababsa7.net/images/PageImage-515435-3918738-home_icon.png" alt="Home" class="home_icon"></a>
+            </div>
+    <nav>
+        <select name="" class="location_dropdown" ng-model="filterQuery.location">
+              <option value="" disabled selected>Locations</option>
+              <option value="dallas">Dallas</option>
+              <option value="chicago">Chicago</option>
+              <option value="los angeles">Los Angeles</option>
+              <option value="new york">New York</option>
+            </select>
+        <select name="" class="price_dropdown" ng-model="filterQuery.price">
+              <option value="" disabled selected>Price</option>
+              <option value="inexpensive">$</option>
+              <option value="average">$$</option>
+              <option value="above_average">$$$</option>
+              <option value="expensive">$$$$</option>
+            </select>
+        <button class="submitbutton" ng-click="getActivities(filterQuery)">Submit</button>
+    </nav>
+  </div>
+</header>
+
+
+    <ui-view></ui-view>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js'></script>
+    <script src='js/app.js'></script>
+    <script src='js/mainCtrl.js'></script>
+    <script src='js/mainService.js'></script>
+
+
+</body>
+
+</html>

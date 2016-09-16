@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.homegreeting {
+    padding-top: 400px;
+    padding-left: 250px;
+    display: flex;
+    width: 60%;
+    align-items: center;
+}
+
+.homegreeting div {
+  padding: 20px;
+}
+
+header {
+  position: fixed;
+}
+
+.company_name {
+    color: #DBDCDC;
+    font-family: Times;
+    font-weight: bold;
+    font-size: 150px;
+    padding-left: 10px;
+}
+
+.headerwrapper {
+    display: flex;
+    padding-top: 15px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.home_icon {
+    width: 40px;
+    height: 40px;
+    padding-right: 15px;
+}
+
+.banner-container {
+    width: 100vw;
+    height: 350px;
+    /*overflow: hidden;*/
+    z-index: -100;
+    background-image: url("https://lovelace-media.imgix.net/uploads/1216/0d7f0360-7387-0133-ed0d-0aa00699013d.jpg?");
+    background-size: cover;
+    background-position: center center;
+}
+
+nav {
+    width: 40%;
+    padding-left: 25%;
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.location_dropdown {
+    width: 130px;
+    box-shadow: 5px 5px 2px #444444;
+}
+
+.price_dropdown {
+    width: 130px;
+    box-shadow: 5px 5px 2px #444444;
+}
+
+button {
+    width: 100px;
+    border-radius: 3px
+    box-shadow: 5px 5px 2px #444444;
+}
+
+.titlebar {
+    padding-left: 200px;
+}
+
+.main-container {
+    padding: 50px;
+    display: flex;
+    margin-top: 350px;
+}
+
+
+.text {
+    width: 70%;
+    right: 100px;
+    border-radius: 3px;
+    padding: 20px;
+    padding-top: 360px;
+    padding-bottom: 20px;
+}
+
+p {
+    padding-bottom: 30px;
+}
+
+
+.submitbutton {
+    background-color: #E9130F;
+    color: white;
+    box-shadow: 5px 5px 2px #444444;
+    border-radius: 5px;
+}
+
+.review-button {
+    background-color: #E9130F;
+    color: white;
+    border-radius: 5px;
+}
+
+textarea {
+    border-radius: 3px;
+}
+
+.activityImages {
+    width: 400px;
+}
+
+.backbutton {
+  background-color: #E9130F;
+  color: white;
+  position: fixed;
+  border-radius: 5px;
+}
+
+.activities-wrapper {
+  padding-top: 360px;
+}
+
+.activity-card {
+  display: flex;
+  width: 100%;
+}
+
+.image-container {
+  width: 30%;
+  padding-left: 5%;
+}
+
+.image-container img {
+  width: 300px;
+}
+
+.location-inner-left {
+  width: 40%;
+}
+
+.location-inner-right {
+  width: 30%;
+  padding-left: 50px;
+}
