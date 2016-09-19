@@ -1,7 +1,7 @@
 angular.module('dosumApp')
     .controller('mainCtrl', function($scope, $state, doSumService) {
 
-        $scope.location = ["Chicago", "Dallas", "Los Angeles", "New York"];
+        $scope.location = ["Boston", "Chicago", "Dallas", "Los Angeles", "Miami", "New York", "Seattle"];
 
         $scope.getActivities = function(filterQuery) {
             console.log(filterQuery);
@@ -15,6 +15,18 @@ angular.module('dosumApp')
                     $state.go('activities');
                 })
         }
+
+
+        $scope.postMessage = function(x) {
+          doSumService.postMessage(x)
+          .then(function(result) {
+            $scope.getMessages(result);
+
+            // $scope.message = '';
+          })
+          ;
+        }
+
 
 
     });

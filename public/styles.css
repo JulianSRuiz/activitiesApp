@@ -23,8 +23,9 @@ header {
     color: #DBDCDC;
     font-family: Times;
     font-weight: bold;
-    font-size: 150px;
-    padding-left: 10px;
+    font-size: 120px;
+    padding-right: 70px;
+    padding-top: 160px;
 }
 
 .headerwrapper {
@@ -37,7 +38,7 @@ header {
 .home_icon {
     width: 40px;
     height: 40px;
-    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .banner-container {
@@ -53,7 +54,6 @@ header {
 nav {
     width: 40%;
     padding-left: 25%;
-    margin-top: 130px;
     display: flex;
     justify-content: space-around;
 }
@@ -75,7 +75,7 @@ button {
 }
 
 .titlebar {
-    padding-left: 200px;
+    padding: 0 auto;
 }
 
 .main-container {
@@ -86,12 +86,10 @@ button {
 
 
 .text {
-    width: 70%;
+    width:60%;
     right: 100px;
-    border-radius: 3px;
-    padding: 20px;
+    margin: 0 auto;
     padding-top: 360px;
-    padding-bottom: 20px;
 }
 
 p {
@@ -112,6 +110,16 @@ p {
     border-radius: 5px;
 }
 
+.subject_input {
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.review_box {
+  border-radius: 4px
+}
+
 textarea {
     border-radius: 3px;
 }
@@ -125,6 +133,7 @@ textarea {
   color: white;
   position: fixed;
   border-radius: 5px;
+  justify-content: space-around;
 }
 
 .activities-wrapper {
@@ -134,6 +143,22 @@ textarea {
 .activity-card {
   display: flex;
   width: 100%;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.searchDiv {
+  display: inline-block;
+  position: fixed;
+  padding-left: 5px;
+}
+
+.search_box {
+  width: 190px;
+  height: 1.5em;
+  border: 1px solid black;
+  justify-content: space-around;
+  border-radius: 4px;
 }
 
 .image-container {
@@ -143,10 +168,12 @@ textarea {
 
 .image-container img {
   width: 300px;
+  border-radius: 3px;
 }
 
 .location-inner-left {
   width: 40%;
+  padding-left: 10px;
 }
 
 .location-inner-right {

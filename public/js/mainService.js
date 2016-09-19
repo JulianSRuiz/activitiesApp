@@ -2,9 +2,8 @@ angular.module('dosumApp')
     .service('doSumService', function($http, $q) {
 
         var baseUrl = 'http://terminal2.expedia.com/x/activities/search';
-        var apikey = 'AmoVsRBADzERLLuqH5bjMV52JphpTYYh'
-
-        //var ausUrl = "?location={{value}}&apikey="
+        var apikey = 'AmoVsRBADzERLLuqH5bjMV52JphpTYYh';
+        var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/outputFormat?parameters";
 
         var inexpensive = [];
         var average = [];
@@ -34,6 +33,7 @@ angular.module('dosumApp')
             return deferred.promise;
         }
 
+
         function datamapper(x) {
             //console.log(Array.isArray(x), x);
             return x.map(function(ele) {
@@ -41,7 +41,7 @@ angular.module('dosumApp')
                     title: ele.title,
                     largeImageURL: ele.largeImageURL,
                     fromPrice: ele.fromPrice,
-                    shortDescription: ele.shortDescription,
+                    shortDescription: ele.supplieName,
                     latLng: ele.latLng
                 }
             })
@@ -52,16 +52,28 @@ angular.module('dosumApp')
         function getPricePoint(activities) {
             return activities.map(function(ele) {
                 var price = parseInt(ele.fromPrice.slice(1));
-                if (price <= 10) {
+                if (price <= 15) {
                     inexpensive.push(ele);
-                } else if (price > 10 && price <= 25) {
+                } else if (price > 15 && price <= 40) {
                     average.push(ele);
-                } else if (price > 25 && price <= 40) {
+                } else if (price > 40 && price <= 100) {
                     above_average.push(ele);
                 } else {
                     expensive.push(ele);
                 }
             })
+        }
+
+
+        this.postMessage = function(post) {
+          return $http({
+            method: 'POST',
+            data: {message:post,
+                person: 'Anonymous:'}
+          })
+          .then(function(response) {
+
+          });
         }
 
     })

@@ -13,17 +13,20 @@
     <header>
         <div class="banner-container">
             <div class="headerwrapper">
+              <a ui-sref="home"><img src="http://shababsa7.net/images/PageImage-515435-3918738-home_icon.png" alt="Home" class="home_icon"></a>
                 <div class="company_name">DoSum</div>
-                <a ui-sref="home"><img src="http://shababsa7.net/images/PageImage-515435-3918738-home_icon.png" alt="Home" class="home_icon"></a>
             </div>
     <nav>
         <select name="" class="location_dropdown" ng-model="filterQuery.location">
               <option value="" disabled selected>Locations</option>
-              <option value="dallas">Dallas</option>
               <option value="chicago">Chicago</option>
+              <option value="dallas">Dallas</option>
               <option value="los angeles">Los Angeles</option>
               <option value="new york">New York</option>
+              <option value="seattle">Seattle</option>
             </select>
+
+
         <select name="" class="price_dropdown" ng-model="filterQuery.price">
               <option value="" disabled selected>Price</option>
               <option value="inexpensive">$</option>
@@ -31,7 +34,7 @@
               <option value="above_average">$$$</option>
               <option value="expensive">$$$$</option>
             </select>
-        <button class="submitbutton" ng-click="getActivities(filterQuery)">Submit</button>
+        <button class="submitbutton" ng-click="getActivities(filterQuery)">Search</button>
     </nav>
   </div>
 </header>
