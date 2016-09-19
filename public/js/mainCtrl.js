@@ -8,7 +8,9 @@ angular.module('dosumApp')
             doSumService.getData(filterQuery)
                 .then(function(activities) {
                   if (activities.length === 0) {
-                    activities[0] = {title : "No results."}
+                    activities[0] = {title : "No results.",
+                        supplierName: "No results.",
+                        fromPrice: "No results."}
                   }
                   console.log(activities);
                     $scope.activities = activities;
@@ -19,13 +21,9 @@ angular.module('dosumApp')
 
         $scope.postMessage = function(x) {
           doSumService.postMessage(x)
-          .then(function(result) {
-            $scope.getMessages(result);
+          };
 
-            // $scope.message = '';
-          })
-          ;
-        }
+        $scope.reviews = doSumService.getMessages();
 
 
 

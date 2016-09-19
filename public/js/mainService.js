@@ -66,14 +66,48 @@ angular.module('dosumApp')
 
 
         this.postMessage = function(post) {
-          return $http({
-            method: 'POST',
-            data: {message:post,
-                person: 'Anonymous:'}
-          })
-          .then(function(response) {
-
-          });
+          reviews.unshift(post);
         }
+
+        this.getMessages = function() {
+          return reviews;
+        }
+
+
+        var reviews = [
+
+
+
+            {subject: "Edison bulb bicycle",
+            review: "Rights crucifix, aesthetic bushwick four dollar toast hexagon pug pabst. Jianbing polaroid VHS photo booth, pitchfork locavore microdosing brunch hexagon bushwick whatever mlkshk bitters. Selfies pork belly DIY, fixie 8-bit blog hot chicken copper mug deep v retro pickled iPhone. Lomo put a bird on it snackwave, semiotics master cleanse church-key leggings. Jean shorts migas wolf typewriter air plant venmo. Microdosing meditation hammock enamel pin bitters polaroid freegan. Lo-fi shabby chic godard pinterest photo booth art party meh, portland",
+            person: 'Anonymous'},
+
+
+            {subject: "Trust fund, green juice",
+            review: "Tumblr fanny pack dreamcatcher. Activated charcoal gochujang XOXO narwhal synth photo booth. Ennui mixtape trust fund selvage kale chips la croix irony DIY four loko. Cardigan master cleanse tilde, crucifix before they sold out raclette chia copper mug hell of shoreditch PBR&B cronut food truck single-origin coffee. Stumptown coloring book ethical pabst, put a bird on it PBR&B dreamcatcher. Locavore yuccie bicycle rights schlitz, cardigan blue bottle fap tattooed. Keytar 90s tousled before they sold out farm-to-table, fam fixie yuccie salvia schlitz XOXO lomo.",
+            person: 'Anonymous'},
+
+
+
+            {subject: "scenester mumblecore",
+            review: "Trust fund green juice poke meh fingerstache gentrify crucifix. Mixtape lomo organic pitchfork. Gochujang small batch blog, tilde yuccie hot chicken gastropub. Deep v woke poutine chartreuse tousled. Try-hard meggings chambray green juice messenger bag. Letterpress umami heirloom cliche tilde literally, poutine microdosing tbh marfa fixie coloring book kombucha actually franzen. Cronut DIY copper mug edison bulb, viral waistcoat cardigan messenger bag.",
+            person: 'Anonymous'},
+
+
+
+            {subject: "Jianbing prism",
+            review: "ennui cred edison bulb hashtag hoodie everyday carry kinfolk ramps helvetica. +1 air plant lomo edison bulb, tote bag direct trade prism four dollar toast yr thundercats. Blog lomo shoreditch scenester lyft, godard flexitarian. Vice sriracha sartorial readymade, ethical salvia pok pok raclette cardigan chia etsy retro intelligentsia gluten-free. Meh raw denim fingerstache, art party thundercats la croix pug glossier semiotics. Bushwick hell of salvia, chambray echo park ennui flannel cliche shoreditch DIY retro selfies poutine. Quinoa disrupt echo park next level kinfolk swag thundercats sriracha, sustainable authentic meditation fashion axe pug portland.",
+            person: 'Anonymous'},
+
+
+
+            {subject: "ennui gentrify",
+            review: "Man bun raw denim single-origin coffee green juice williamsburg, pour-over meggings bitters. Artisan viral fashion axe meditation ramps. Helvetica occupy enamel pin pabst. Lumbersexual meditation chambray semiotics, poutine crucifix flexitarian salvia hella fam. Direct trade polaroid wayfarers iPhone taxidermy. Gentrify 8-bit roof party, shoreditch tousled meggings intelligentsia franzen celiac.",
+            person: 'Anonymous'}
+          ]
+
+
+
+
 
     })

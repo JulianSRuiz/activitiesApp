@@ -5,42 +5,19 @@
   </div>
 <br>
   <div class="reviews">
-        <strong>Write a review:</strong>
-        <br>
-        <br>
+        <h3>Write a review:</h3>
         <div>
-            <strong>Subject: </strong><input type="text" class="subject_input" ng-submit="postMessage(message)">
+            <strong>Subject: </strong><input type="text" class="subject_input" ng-model="messagesubject">
             <br>
             <br>
-            <textarea name="name" rows="9" cols="100" class="review_box" ng-submit="postMessage(message)"></textarea>
-            <button class="review-button">Submit</button>
+            <textarea name="name" rows="9" cols="100" class="review_box" ng-model="messagereview"></textarea>
+            <button class="review-button" ng-click='postMessage({subject: messagesubject, review: messagereview,
+            person: 'person'})'>Submit</button>
         </div>
-        <div class="scroll" ng-model="message">
-        <p><strong>Vape offal slow-carb</strong>
-            <br>edison bulb bicycle rights crucifix, aesthetic bushwick four dollar toast hexagon pug pabst. Jianbing polaroid VHS photo booth, pitchfork locavore microdosing brunch hexagon bushwick whatever mlkshk bitters. Selfies pork belly
-            DIY, fixie 8-bit blog hot chicken copper mug deep v retro pickled iPhone. Lomo put a bird on it snackwave, semiotics master cleanse church-key leggings. Jean shorts migas wolf typewriter air plant venmo. Microdosing meditation hammock enamel pin bitters polaroid freegan. Lo-fi shabby chic godard pinterest photo booth art party meh, portland flannel food <br><strong>Submitted By:</strong> <font color="red">Anonymous</font></p>
-
-        <p><strong>Tote bag umami</strong>
-            <br>trust fund, green juice tumblr fanny pack dreamcatcher. Activated charcoal gochujang XOXO narwhal synth photo booth. Ennui mixtape trust fund selvage kale chips la croix irony DIY four loko. Cardigan master cleanse tilde, crucifix
-            before they sold out raclette chia copper mug hell of shoreditch PBR&B cronut food truck single-origin coffee. Stumptown coloring book ethical pabst, put a bird on it PBR&B dreamcatcher. Locavore yuccie bicycle rights schlitz, cardigan blue
-            bottle fap tattooed. Keytar 90's tousled before they sold out farm-to-table, fam fixie yuccie salvia schlitz XOXO lomo.
-            <br><strong>Submitted By:</strong> <font color="red">@jeriz8</font></p>
-
-        <p><strong>Chillwave gochujang viral</strong>
-            <br>scenester mumblecore trust fund green juice poke meh fingerstache gentrify crucifix. Mixtape lomo organic pitchfork. Gochujang small batch blog, tilde yuccie hot chicken gastropub. Deep v woke poutine chartreuse tousled.
-            Try-hard meggings chambray green juice messenger bag. Letterpress umami heirloom cliche tilde literally, poutine microdosing tbh marfa fixie coloring book kombucha actually franzen. Cronut DIY copper mug edison bulb, viral waistcoat cardigan messenger bag.
-            <br><strong>Submitted By:</strong> <font color="red">@deftoneslover</font></p>
-
-        <p><strong>Pinterest lomo banjo</strong>
-            <br>jianbing prism ennui cred edison bulb hashtag hoodie everyday carry kinfolk ramps helvetica. +1 air plant lomo edison bulb, tote bag direct trade prism four dollar toast yr thundercats. Blog lomo shoreditch scenester lyft,
-            godard flexitarian. Vice sriracha sartorial readymade, ethical salvia pok pok raclette cardigan chia etsy retro intelligentsia gluten-free. Meh raw denim fingerstache, art party thundercats la croix pug glossier semiotics. Bushwick hell of salvia, chambray echo park ennui flannel cliche shoreditch DIY retro selfies poutine. Quinoa disrupt echo park next level kinfolk swag thundercats sriracha, sustainable authentic meditation fashion axe pug portland.
-            <br><strong>Submitted By:</strong> <font color="red">xXcatXladyXx</font></p>
-
-        <p><strong>Thundercats raclette</strong>
-            <br>ennui gentrify. Man bun raw denim single-origin coffee green juice williamsburg, pour-over meggings bitters. Artisan viral fashion axe meditation ramps. Helvetica occupy enamel pin pabst. Lumbersexual meditation chambray semiotics,
-            poutine crucifix flexitarian salvia hella fam. Direct trade polaroid wayfarers iPhone taxidermy. Gentrify 8-bit roof party, shoreditch tousled meggings intelligentsia franzen celiac.
-            <br><strong>Submitted By:</strong> <font color="red">Bob</font></p>
-
+        <div class="scroll" ng-repeat='review in reviews'>
+          <p><strong>Subject:</strong> {{review.subject}}
+          <br><strong>Review:</strong> {{review.review}}
+          <br><strong>Review By:</strong> {{review.person}}</p>
 </div>
 </div>
     </div>
