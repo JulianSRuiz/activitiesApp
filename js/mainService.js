@@ -1,7 +1,7 @@
 angular.module('dosumApp')
     .service('doSumService', function($http, $q) {
 
-        var baseUrl = 'http://terminal2.expedia.com/x/activities/search';
+        var baseUrl = 'https://terminal2.expedia.com/x/activities/search';
         var apikey = 'AmoVsRBADzERLLuqH5bjMV52JphpTYYh';
         var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/outputFormat?parameters";
 
