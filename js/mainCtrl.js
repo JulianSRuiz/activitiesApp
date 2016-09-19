@@ -15,6 +15,8 @@ angular.module('dosumApp')
                   console.log(activities);
                     $scope.activities = activities;
                     $state.go('activities');
+                    $('.activity-card').slideUp('slow');
+                    //$('.activity-card').slideDown('slow');
                 })
         }
 

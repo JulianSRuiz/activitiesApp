@@ -7,12 +7,13 @@
   <div class="reviews">
         <h3>Write a review:</h3>
         <div>
-            <strong>Subject: </strong><input type="text" class="subject_input" ng-model="messagesubject">
+            <strong>Subject: </strong><input type="text" class="subject_input" ng-model="subject">
             <br>
             <br>
-            <textarea name="name" rows="9" cols="100" class="review_box" ng-model="messagereview"></textarea>
-            <button class="review-button" ng-click='postMessage({subject: messagesubject, review: messagereview,
-            person: 'person'})'>Submit</button>
+            <textarea name="name" rows="9" cols="100" class="review_box" ng-model="review"></textarea>
+            <br>
+            <strong>Review By: </strong><input type="text" class="person" ng-model="person">
+            <button class="review-button" ng-click='postMessage({subject, review, person})'>Submit</button>
         </div>
         <div class="scroll" ng-repeat='review in reviews'>
           <p><strong>Subject:</strong> {{review.subject}}
